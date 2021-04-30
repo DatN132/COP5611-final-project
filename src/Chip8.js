@@ -35,8 +35,8 @@ class Chip8
     this.stack = [];
     this.sp = 0;
 
+    // both are for sound
     this.delayTimer = 0;
-
     this.soundTimer = 0;
 
     // initiate components
@@ -52,6 +52,7 @@ class Chip8
   // set up sprites according to data sheet
   loadSpritsIntoMemory()
   {
+    // make it so that program can quickly draw pixels on screen
     const sprites =
     [
       0xF0, 0x90, 0x90, 0x90, 0xF0, // 0
@@ -87,6 +88,7 @@ class Chip8
   }
 
   // interpret 10 instructions per cycle
+  // else it will be too slow on a browser
   cycle()
   {
     for(let i=0; i < this.speed; i++)

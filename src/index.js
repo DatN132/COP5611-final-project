@@ -58,7 +58,6 @@ if (urlParams.has('rom'))
 
 switch(rom)
 {
-  case 'MAZE': loadROM('MAZE'); break;
   case 'TANK': loadROM('TANK'); break;
   case 'TETRIS': loadROM('TETRIS'); break;
   default: loadROM('SPACE-INVADER');

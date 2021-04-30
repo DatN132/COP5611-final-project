@@ -1,7 +1,7 @@
 // define scaling factor to make the screen viewable on modern monitors
 const COLS = 64;
 const ROWS = 32;
-const SCALE = 15;
+const SCALE = 15; //15x fits my 1080p monitor well
 
 // process console output by configuring html canvas
 class Screen
@@ -45,6 +45,7 @@ class Screen
     // toggle the pixel at passed in location
     this.display[x + (y * this.cols)] ^= 1;
 
+    // detect collision
     // return true if pixel is turned off, false if turned on
     return this.display[x + (y * this.cols)] != 1;
   }
@@ -78,7 +79,6 @@ class Screen
     }
   }
 
-  // NOT used
   // only here for initial testing
   testRender()
   {

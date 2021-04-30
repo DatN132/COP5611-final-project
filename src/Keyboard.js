@@ -54,7 +54,7 @@ class Keyboard
     }
   }
 
-  //process key up
+  //process key up to prepare for next key
   onKeyUp(event)
   {
     let key = this.keymap[event.which];
